@@ -12,7 +12,6 @@ app.set('view options',{
 	"open":"{{",
 	"close":"}}"
 });
-var liluchang;
 app.use(express.static('./public'));
 main(app);
 app.use(function(req,res,next){
@@ -22,4 +21,4 @@ app.use(function(req,res,next){
 	next();
 });
 route(app,controllers);
-app.listen(3000);
+app.listen(80);

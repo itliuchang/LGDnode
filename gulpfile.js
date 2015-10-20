@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	express = require('express'),
 	exec = require('child_process').exec,
-	cmd = 'git pull lgd master;pm2 restart /Users/liuchang/project/git/lgd/app.js',
+	cmd = 'git pull lgd master;pm2 restart /home/liuchang/LGDgit/app.js',
 	app = express();
 	app.get('/',function(req,res){
 		exec(cmd,function(err,stdout,stderr){
@@ -10,9 +10,9 @@ var gulp = require('gulp'),
         		console.log('error');
         	}else{
         		console.log(stdout);
+			res.send(stdout);
         	}
         });
-		res.send('success');
 	});
 	app.listen(3100);
 // gulp.task('watch',function(){
