@@ -1,3 +1,5 @@
 module.exports = {
-	test : 'http://www.baidu.com' 
+	check : {
+		grades : 'http://2.uanli.sinaapp.com/api/?controller=grade&action=read',
+	} 
 }

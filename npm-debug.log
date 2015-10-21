@@ -1,0 +1,399 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'req-sync' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
+4 verbose install initial load of /Users/liuchang/project/git/lgd/package.json
+5 warn package.json lgd@1.0.0 No description
+6 warn package.json lgd@1.0.0 No repository field.
+7 warn package.json lgd@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from /Users/liuchang/project/git/lgd/node_modules/ejs/package.json
+9 verbose installManyTop reading scoped package data from /Users/liuchang/project/git/lgd/node_modules/express/package.json
+10 verbose installManyTop reading scoped package data from /Users/liuchang/project/git/lgd/node_modules/gulp/package.json
+11 verbose installManyTop reading scoped package data from /Users/liuchang/project/git/lgd/node_modules/gulp-livereload/package.json
+12 verbose installManyTop reading scoped package data from /Users/liuchang/project/git/lgd/node_modules/request/package.json
+13 info package.json ejs@1.0.0 No license field.
+14 verbose readDependencies loading dependencies from /Users/liuchang/project/git/lgd/package.json
+15 silly cache add args [ 'req-sync', null ]
+16 verbose cache add spec req-sync
+17 silly cache add parsed spec Result {
+17 silly cache add   raw: 'req-sync',
+17 silly cache add   scope: null,
+17 silly cache add   name: 'req-sync',
+17 silly cache add   rawSpec: '',
+17 silly cache add   spec: '*',
+17 silly cache add   type: 'range' }
+18 silly addNamed req-sync@*
+19 verbose addNamed "*" is a valid semver range for req-sync
+20 silly addNameRange { name: 'req-sync', range: '*', hasData: false }
+21 silly mapToRegistry name req-sync
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry https://registry.npmjs.org/
+24 silly mapToRegistry uri https://registry.npmjs.org/req-sync
+25 verbose addNameRange registry:https://registry.npmjs.org/req-sync not in flight; fetching
+26 verbose request uri https://registry.npmjs.org/req-sync
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 13:43:04
+29 verbose request id 1aeee1bb0f928f91
+30 http request GET https://registry.npmjs.org/req-sync
+31 http 200 https://registry.npmjs.org/req-sync
+32 silly get cb [ 200,
+32 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+32 silly get     etag: '"E923RKDL1YETH4P0OEU7VFAD6"',
+32 silly get     'content-type': 'application/json',
+32 silly get     'cache-control': 'max-age=60',
+32 silly get     'content-length': '13037',
+32 silly get     'accept-ranges': 'bytes',
+32 silly get     date: 'Wed, 21 Oct 2015 05:43:05 GMT',
+32 silly get     via: '1.1 varnish',
+32 silly get     age: '0',
+32 silly get     connection: 'keep-alive',
+32 silly get     'x-served-by': 'cache-nrt6129-NRT',
+32 silly get     'x-cache': 'MISS',
+32 silly get     'x-cache-hits': '0',
+32 silly get     'x-timer': 'S1445406185.181029,VS0,VE768',
+32 silly get     vary: 'Accept' } ]
+33 verbose get saving req-sync to /Users/liuchang/.npm/registry.npmjs.org/req-sync/.cache.json
+34 silly addNameRange number 2 { name: 'req-sync', range: '*', hasData: true }
+35 silly addNameRange versions [ 'req-sync',
+35 silly addNameRange   [ '0.0.1',
+35 silly addNameRange     '0.0.2',
+35 silly addNameRange     '0.0.3',
+35 silly addNameRange     '0.0.4',
+35 silly addNameRange     '0.1.0',
+35 silly addNameRange     '0.1.1',
+35 silly addNameRange     '0.1.2',
+35 silly addNameRange     '0.1.3',
+35 silly addNameRange     '0.1.4',
+35 silly addNameRange     '0.1.5' ] ]
+36 silly addNamed req-sync@0.1.5
+37 verbose addNamed "0.1.5" is a plain semver version for req-sync
+38 silly mapToRegistry name req-sync
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry uri https://registry.npmjs.org/req-sync
+42 verbose addRemoteTarball https://registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz not in flight; adding
+43 verbose addRemoteTarball [ 'https://registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz',
+43 verbose addRemoteTarball   'faa5d768594837e9a2373137e9106012b09b3118' ]
+44 info retry fetch attempt 1 at 13:43:06
+45 info attempt registry request try #1 at 13:43:06
+46 http fetch GET https://registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz
+47 http fetch 200 https://registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz
+48 silly fetchAndShaCheck shasum faa5d768594837e9a2373137e9106012b09b3118
+49 verbose addTmpTarball /var/folders/jc/1zw8srz14wn0ntvd8q9l9r7r0000gn/T/npm-1960-acd24d22/registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz not in flight; adding
+50 verbose addTmpTarball already have metadata; skipping unpack for req-sync@0.1.5
+51 silly cache afterAdd req-sync@0.1.5
+52 verbose afterAdd /Users/liuchang/.npm/req-sync/0.1.5/package/package.json not in flight; writing
+53 verbose afterAdd /Users/liuchang/.npm/req-sync/0.1.5/package/package.json written
+54 silly install resolved [ { name: 'req-sync',
+54 silly install resolved     version: '0.1.5',
+54 silly install resolved     description: 'A synchronous HTTP Client library for node.js',
+54 silly install resolved     main: 'lib/req-sync.js',
+54 silly install resolved     repository: { type: 'git', url: 'git://github.com/Centny/req-sync.git' },
+54 silly install resolved     author: { name: 'Centny' },
+54 silly install resolved     license: 'BSD',
+54 silly install resolved     gypfile: true,
+54 silly install resolved     dependencies: { nan: '~1.6.2' },
+54 silly install resolved     devDependencies:
+54 silly install resolved      { chai: '1.10.0',
+54 silly install resolved        jshint: '2.1.10',
+54 silly install resolved        istanbul: '0.1.43',
+54 silly install resolved        mocha: '1.12.0',
+54 silly install resolved        optimist: '~0.6.1' },
+54 silly install resolved     scripts: { install: 'node-gyp rebuild' },
+54 silly install resolved     bugs: { url: 'https://github.com/Centny/req-sync/issues' },
+54 silly install resolved     homepage: 'https://github.com/Centny/req-sync',
+54 silly install resolved     directories: { test: 'test' },
+54 silly install resolved     keywords: [ 'http', 'sync' ],
+54 silly install resolved     _id: 'req-sync@0.1.5',
+54 silly install resolved     _shasum: 'faa5d768594837e9a2373137e9106012b09b3118',
+54 silly install resolved     _from: 'req-sync@*',
+54 silly install resolved     _npmVersion: '1.4.9',
+54 silly install resolved     _npmUser: { name: 'centny', email: 'centny@gmail.com' },
+54 silly install resolved     maintainers: [ [Object] ],
+54 silly install resolved     dist:
+54 silly install resolved      { shasum: 'faa5d768594837e9a2373137e9106012b09b3118',
+54 silly install resolved        tarball: 'http://registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz' },
+54 silly install resolved     _resolved: 'https://registry.npmjs.org/req-sync/-/req-sync-0.1.5.tgz' } ]
+55 info install req-sync@0.1.5 into /Users/liuchang/project/git/lgd
+56 info installOne req-sync@0.1.5
+57 verbose installOne of req-sync to /Users/liuchang/project/git/lgd not in flight; installing
+58 verbose lock using /Users/liuchang/.npm/_locks/req-sync-bed3dca3eac23050.lock for /Users/liuchang/project/git/lgd/node_modules/req-sync
+59 silly install write writing req-sync 0.1.5 to /Users/liuchang/project/git/lgd/node_modules/req-sync
+60 verbose unbuild node_modules/req-sync
+61 silly gentlyRm /Users/liuchang/project/git/lgd/node_modules/req-sync is being purged from base /Users/liuchang/project/git/lgd
+62 verbose gentlyRm don't care about contents; nuking /Users/liuchang/project/git/lgd/node_modules/req-sync
+63 verbose tar unpack /Users/liuchang/.npm/req-sync/0.1.5/package.tgz
+64 verbose tar unpacking to /Users/liuchang/project/git/lgd/node_modules/req-sync
+65 silly gentlyRm /Users/liuchang/project/git/lgd/node_modules/req-sync is being purged
+66 verbose gentlyRm don't care about contents; nuking /Users/liuchang/project/git/lgd/node_modules/req-sync
+67 silly gunzTarPerm modes [ '755', '644' ]
+68 silly gunzTarPerm extractEntry package.json
+69 silly gunzTarPerm extractEntry .npmignore
+70 silly gunzTarPerm extractEntry README.md
+71 silly gunzTarPerm extractEntry Makefile
+72 silly gunzTarPerm extractEntry binding.gyp
+73 silly gunzTarPerm extractEntry lib/req-sync.js
+74 silly gunzTarPerm extractEntry lib/curlr.cc
+75 silly gunzTarPerm extractEntry req-sync/req-sync.xcodeproj/project.pbxproj
+76 silly gunzTarPerm extractEntry req-sync/req-sync.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+77 silly gunzTarPerm extractEntry req-sync.sublime-project
+78 silly gunzTarPerm extractEntry test/req-syc.unit.js
+79 silly gunzTarPerm extractEntry test/run.js
+80 silly gunzTarPerm extractEntry test/t.js
+81 silly gunzTarPerm extractEntry test/mocha.opts
+82 silly gunzTarPerm extractEntry test/support/walk_dir.js
+83 silly gunzTarPerm extractEntry test/t.go
+84 verbose write writing to /Users/liuchang/project/git/lgd/node_modules/req-sync/package.json
+85 info preinstall req-sync@0.1.5
+86 verbose readDependencies loading dependencies from /Users/liuchang/project/git/lgd/node_modules/req-sync/package.json
+87 silly prepareForInstallMany adding nan@~1.6.2 from req-sync dependencies
+88 verbose readDependencies loading dependencies from /Users/liuchang/project/git/lgd/node_modules/req-sync/package.json
+89 silly cache add args [ 'nan@~1.6.2', null ]
+90 verbose cache add spec nan@~1.6.2
+91 silly cache add parsed spec Result {
+91 silly cache add   raw: 'nan@~1.6.2',
+91 silly cache add   scope: null,
+91 silly cache add   name: 'nan',
+91 silly cache add   rawSpec: '~1.6.2',
+91 silly cache add   spec: '>=1.6.2 <1.7.0',
+91 silly cache add   type: 'range' }
+92 silly addNamed nan@>=1.6.2 <1.7.0
+93 verbose addNamed ">=1.6.2 <1.7.0" is a valid semver range for nan
+94 silly addNameRange { name: 'nan', range: '>=1.6.2 <1.7.0', hasData: false }
+95 silly mapToRegistry name nan
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry uri https://registry.npmjs.org/nan
+99 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+100 verbose request uri https://registry.npmjs.org/nan
+101 verbose request no auth needed
+102 info attempt registry request try #1 at 13:43:06
+103 verbose etag "EEJEYBDBWDA07LWTXUI68JUWL"
+104 http request GET https://registry.npmjs.org/nan
+105 http 304 https://registry.npmjs.org/nan
+106 silly get cb [ 304,
+106 silly get   { date: 'Wed, 21 Oct 2015 05:43:07 GMT',
+106 silly get     via: '1.1 varnish',
+106 silly get     'cache-control': 'max-age=60',
+106 silly get     etag: '"EEJEYBDBWDA07LWTXUI68JUWL"',
+106 silly get     age: '17',
+106 silly get     connection: 'keep-alive',
+106 silly get     'x-served-by': 'cache-nrt6127-NRT',
+106 silly get     'x-cache': 'HIT',
+106 silly get     'x-cache-hits': '1',
+106 silly get     'x-timer': 'S1445406187.112873,VS0,VE2',
+106 silly get     vary: 'Accept' } ]
+107 verbose etag https://registry.npmjs.org/nan from cache
+108 verbose get saving nan to /Users/liuchang/.npm/registry.npmjs.org/nan/.cache.json
+109 silly addNameRange number 2 { name: 'nan', range: '>=1.6.2 <1.7.0', hasData: true }
+110 silly addNameRange versions [ 'nan',
+110 silly addNameRange   [ '0.3.0-wip',
+110 silly addNameRange     '0.3.0-wip2',
+110 silly addNameRange     '0.3.0',
+110 silly addNameRange     '0.3.1',
+110 silly addNameRange     '0.3.2',
+110 silly addNameRange     '0.4.0',
+110 silly addNameRange     '0.4.1',
+110 silly addNameRange     '0.4.2',
+110 silly addNameRange     '0.4.3',
+110 silly addNameRange     '0.4.4',
+110 silly addNameRange     '0.5.0',
+110 silly addNameRange     '0.5.1',
+110 silly addNameRange     '0.5.2',
+110 silly addNameRange     '0.6.0',
+110 silly addNameRange     '0.7.0',
+110 silly addNameRange     '0.7.1',
+110 silly addNameRange     '0.8.0',
+110 silly addNameRange     '1.0.0',
+110 silly addNameRange     '1.1.0',
+110 silly addNameRange     '1.1.1',
+110 silly addNameRange     '1.1.2',
+110 silly addNameRange     '1.2.0',
+110 silly addNameRange     '1.3.0',
+110 silly addNameRange     '1.4.0',
+110 silly addNameRange     '1.4.1',
+110 silly addNameRange     '1.5.0',
+110 silly addNameRange     '1.4.2',
+110 silly addNameRange     '1.4.3',
+110 silly addNameRange     '1.5.1',
+110 silly addNameRange     '1.5.2',
+110 silly addNameRange     '1.6.0',
+110 silly addNameRange     '1.5.3',
+110 silly addNameRange     '1.6.1',
+110 silly addNameRange     '1.6.2',
+110 silly addNameRange     '1.7.0',
+110 silly addNameRange     '1.8.0',
+110 silly addNameRange     '1.8.1',
+110 silly addNameRange     '1.8.2',
+110 silly addNameRange     '1.8.3',
+110 silly addNameRange     '1.8.4',
+110 silly addNameRange     '1.9.0',
+110 silly addNameRange     '2.0.0',
+110 silly addNameRange     '2.0.1',
+110 silly addNameRange     '2.0.2',
+110 silly addNameRange     '2.0.3',
+110 silly addNameRange     '2.0.4',
+110 silly addNameRange     '2.0.5',
+110 silly addNameRange     '2.0.6',
+110 silly addNameRange     '2.0.7',
+110 silly addNameRange     '2.0.8',
+110 silly addNameRange     '2.0.9',
+110 silly addNameRange     '2.1.0' ] ]
+111 silly addNamed nan@1.6.2
+112 verbose addNamed "1.6.2" is a plain semver version for nan
+113 silly mapToRegistry name nan
+114 silly mapToRegistry using default registry
+115 silly mapToRegistry registry https://registry.npmjs.org/
+116 silly mapToRegistry uri https://registry.npmjs.org/nan
+117 verbose addRemoteTarball https://registry.npmjs.org/nan/-/nan-1.6.2.tgz not in flight; adding
+118 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-1.6.2.tgz',
+118 verbose addRemoteTarball   '2657d1c43b00f1e847e083832285b7d8f5ba8ec8' ]
+119 info retry fetch attempt 1 at 13:43:07
+120 info attempt registry request try #1 at 13:43:07
+121 http fetch GET https://registry.npmjs.org/nan/-/nan-1.6.2.tgz
+122 http fetch 200 https://registry.npmjs.org/nan/-/nan-1.6.2.tgz
+123 silly fetchAndShaCheck shasum 2657d1c43b00f1e847e083832285b7d8f5ba8ec8
+124 verbose addTmpTarball /var/folders/jc/1zw8srz14wn0ntvd8q9l9r7r0000gn/T/npm-1960-acd24d22/registry.npmjs.org/nan/-/nan-1.6.2.tgz not in flight; adding
+125 verbose addTmpTarball already have metadata; skipping unpack for nan@1.6.2
+126 silly cache afterAdd nan@1.6.2
+127 verbose afterAdd /Users/liuchang/.npm/nan/1.6.2/package/package.json not in flight; writing
+128 verbose afterAdd /Users/liuchang/.npm/nan/1.6.2/package/package.json written
+129 silly install resolved [ { name: 'nan',
+129 silly install resolved     version: '1.6.2',
+129 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+129 silly install resolved     main: 'include_dirs.js',
+129 silly install resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+129 silly install resolved     scripts:
+129 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+129 silly install resolved        'rebuild-tests': 'pangyp rebuild --directory test' },
+129 silly install resolved     contributors:
+129 silly install resolved      [ [Object],
+129 silly install resolved        [Object],
+129 silly install resolved        [Object],
+129 silly install resolved        [Object],
+129 silly install resolved        [Object],
+129 silly install resolved        [Object],
+129 silly install resolved        [Object] ],
+129 silly install resolved     devDependencies:
+129 silly install resolved      { bindings: '~1.2.1',
+129 silly install resolved        'node-gyp': '~1.0.2',
+129 silly install resolved        pangyp: '~2.0.1',
+129 silly install resolved        tap: '~0.5.0',
+129 silly install resolved        xtend: '~4.0.0' },
+129 silly install resolved     license: 'MIT',
+129 silly install resolved     gitHead: 'ab0e5eed8d4aa36111bf8f44cf75644ece327e98',
+129 silly install resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+129 silly install resolved     homepage: 'https://github.com/rvagg/nan',
+129 silly install resolved     _id: 'nan@1.6.2',
+129 silly install resolved     _shasum: '2657d1c43b00f1e847e083832285b7d8f5ba8ec8',
+129 silly install resolved     _from: 'nan@>=1.6.2 <1.7.0',
+129 silly install resolved     _npmVersion: '2.0.0',
+129 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+129 silly install resolved     maintainers: [ [Object], [Object] ],
+129 silly install resolved     dist:
+129 silly install resolved      { shasum: '2657d1c43b00f1e847e083832285b7d8f5ba8ec8',
+129 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-1.6.2.tgz' },
+129 silly install resolved     directories: {},
+129 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.6.2.tgz' } ]
+130 info install nan@1.6.2 into /Users/liuchang/project/git/lgd/node_modules/req-sync
+131 info installOne nan@1.6.2
+132 verbose installOne of nan to /Users/liuchang/project/git/lgd/node_modules/req-sync not in flight; installing
+133 verbose lock using /Users/liuchang/.npm/_locks/nan-10be54e19b1e1a03.lock for /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+134 silly install write writing nan 1.6.2 to /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+135 verbose unbuild node_modules/req-sync/node_modules/nan
+136 silly gentlyRm /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan is being purged from base /Users/liuchang/project/git/lgd
+137 verbose gentlyRm don't care about contents; nuking /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+138 verbose tar unpack /Users/liuchang/.npm/nan/1.6.2/package.tgz
+139 verbose tar unpacking to /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+140 silly gentlyRm /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan is being purged
+141 verbose gentlyRm don't care about contents; nuking /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+142 silly gunzTarPerm modes [ '755', '644' ]
+143 silly gunzTarPerm extractEntry package.json
+144 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+145 silly gunzTarPerm extractEntry include_dirs.js
+146 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+147 silly gunzTarPerm extractEntry LICENSE.md
+148 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+149 silly gunzTarPerm extractEntry .dntrc
+150 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+151 silly gunzTarPerm extractEntry appveyor.yml
+152 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+153 silly gunzTarPerm extractEntry nan.h
+154 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+155 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+156 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+157 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+158 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+159 silly gunzTarPerm extractEntry nan_new.h
+160 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+161 silly gunzTarPerm extractEntry nan_string_bytes.h
+162 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+163 silly gunzTarPerm extractEntry CHANGELOG.md
+164 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+165 verbose write writing to /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan/package.json
+166 info preinstall nan@1.6.2
+167 verbose readDependencies loading dependencies from /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan/package.json
+168 verbose readDependencies loading dependencies from /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan/package.json
+169 silly install resolved []
+170 verbose about to build /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+171 info build /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+172 info linkStuff nan@1.6.2
+173 silly linkStuff nan@1.6.2 has /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules as its parent node_modules
+174 verbose linkBins nan@1.6.2
+175 verbose linkMans nan@1.6.2
+176 verbose rebuildBundles nan@1.6.2
+177 info install nan@1.6.2
+178 info postinstall nan@1.6.2
+179 verbose unlock done using /Users/liuchang/.npm/_locks/nan-10be54e19b1e1a03.lock for /Users/liuchang/project/git/lgd/node_modules/req-sync/node_modules/nan
+180 verbose about to build /Users/liuchang/project/git/lgd/node_modules/req-sync
+181 info build /Users/liuchang/project/git/lgd/node_modules/req-sync
+182 info linkStuff req-sync@0.1.5
+183 silly linkStuff req-sync@0.1.5 has /Users/liuchang/project/git/lgd/node_modules as its parent node_modules
+184 verbose linkBins req-sync@0.1.5
+185 verbose linkMans req-sync@0.1.5
+186 verbose rebuildBundles req-sync@0.1.5
+187 verbose rebuildBundles [ 'nan' ]
+188 info install req-sync@0.1.5
+189 verbose unsafe-perm in lifecycle true
+190 info req-sync@0.1.5 Failed to exec install script
+191 verbose unlock done using /Users/liuchang/.npm/_locks/req-sync-bed3dca3eac23050.lock for /Users/liuchang/project/git/lgd/node_modules/req-sync
+192 verbose stack Error: req-sync@0.1.5 install: `node-gyp rebuild`
+192 verbose stack Exit status 1
+192 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+192 verbose stack     at emitTwo (events.js:87:13)
+192 verbose stack     at EventEmitter.emit (events.js:172:7)
+192 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+192 verbose stack     at emitTwo (events.js:87:13)
+192 verbose stack     at ChildProcess.emit (events.js:172:7)
+192 verbose stack     at maybeClose (internal/child_process.js:818:16)
+192 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+193 verbose pkgid req-sync@0.1.5
+194 verbose cwd /Users/liuchang/project/git/lgd
+195 error Darwin 14.4.0
+196 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "req-sync"
+197 error node v4.1.2
+198 error npm  v2.14.4
+199 error code ELIFECYCLE
+200 error req-sync@0.1.5 install: `node-gyp rebuild`
+200 error Exit status 1
+201 error Failed at the req-sync@0.1.5 install script 'node-gyp rebuild'.
+201 error This is most likely a problem with the req-sync package,
+201 error not with npm itself.
+201 error Tell the author that this fails on your system:
+201 error     node-gyp rebuild
+201 error You can get their info via:
+201 error     npm owner ls req-sync
+201 error There is likely additional logging output above.
+202 verbose exit [ 1, true ]
+203 verbose unbuild node_modules/req-sync
+204 info preuninstall req-sync@0.1.5
+205 info uninstall req-sync@0.1.5
+206 verbose unbuild rmStuff req-sync@0.1.5 from /Users/liuchang/project/git/lgd/node_modules
+207 info postuninstall req-sync@0.1.5
+208 silly gentlyRm /Users/liuchang/project/git/lgd/node_modules/req-sync is being purged from base /Users/liuchang/project/git/lgd
+209 verbose gentlyRm don't care about contents; nuking /Users/liuchang/project/git/lgd/node_modules/req-sync
+210 silly vacuum-fs purging /Users/liuchang/project/git/lgd/node_modules/req-sync
+211 silly vacuum-fs quitting because other entries in /Users/liuchang/project/git/lgd/node_modules
