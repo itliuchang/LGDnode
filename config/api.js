@@ -1,5 +1,6 @@
 module.exports = {
+	host : '2.uanli.sinaapp.com',
 	check : {
-		grades : 'http://2.uanli.sinaapp.com/api/?controller=grade&action=read',
+		grades : '/api/?controller=grade&action=read',
 	} 
 }

@@ -1,3 +1,26 @@
 {{ include ../layout/header }}
-	<h1>成绩查询</h1>
+<link rel="stylesheet" type="text/css" href="/css/check/grades.css">
+	<h1>查询结果</h1>
+	<ul>
+	    <li>姓名：朱厚坤</li>
+	    <li>学号：2015</li>
+	</ul>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>科目</th>
+				<th>分数</th>
+				<th>绩点</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{ for(var i = 0;i<data.length;i++){ }}
+			<tr>
+				<th>{{=data[i].coursename}}</th>
+				<th>{{=data[i].grade}}</th>
+				<th>{{=data[i].point}}</th>
+			</tr>
+			{{ } }}
+		</tbody>
+	</table>
 {{ include ../layout/footer}}
