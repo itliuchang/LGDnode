@@ -20,5 +20,8 @@ app.use(function(req,res,next){
 	}
 	next();
 });
-route(app,controllers);
+app.use(function(req,res,next){
+	route(req,app,controllers);
+	next();
+});
 app.listen(3000);

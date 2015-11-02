@@ -1,4 +1,7 @@
-module.exports=function(app,controllers){
+module.exports=function(req,app,controllers){
+	// console.log(req.query);
+	app.get('/',controllers.UserAuth);
+	app.get('/userbind',controllers.UserBind);
 	app.get('/active/index',controllers.Aindex);
 	app.get('/active/signup',controllers.Asignup);
 	app.get('/check/curriculum',controllers.Ccurriculum);

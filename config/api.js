@@ -1,6 +1,6 @@
 module.exports = {
-	host : '2.uanli.sinaapp.com',
+	host : 'uanli.cn',
 	check : {
-		grades : '/api/?controller=grade&action=read',
+		grades : '/wechat/api/?controller=grade&action=read',
 	} 
 }
