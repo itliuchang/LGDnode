@@ -2,6 +2,7 @@ var controllers = require('./controllers'),
 	express = require('express'),
 	main = require('./config/main'),
 	route = require('./config/route'),
+	proxy = require('./proxy');
 	ejs = require('ejs'),
 	app = express();
 ejs.open = "{{";
@@ -20,8 +21,23 @@ app.use(function(req,res,next){
 	}
 	next();
 });
+// app.use(function(req,res,next){
+// 	if(req.path = '/userbind'){
+// 		app.get('/userbind',controllers.UserBind);
+// 	}
+// 	next();
+// });
+// app.use(function(req,res,next){
+// 	var openId = req.query.openId || 0;
+// 	if(proxy.user.auth(openId).code==200) next();
+// 		else{
+// 			res.redirect('/userbind');
+// 			next();
+// 		}
+
+// });
 app.use(function(req,res,next){
-	route(req,app,controllers);
+	route(req,res,app,controllers,proxy);
 	next();
 });
 app.listen(3000);
