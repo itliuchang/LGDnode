@@ -23,7 +23,6 @@ app.use(function(req,res,next){
 	next();
 });
 app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false, maxAge: null }}));
-app.use(cookieParser());
 
 app.use(function(req,res,next){
 	session({secret:'123456',name: 'testapp',cookie: {maxAge: 80000,openId:req.query.openId},resave: false,saveUninitialized: true,})(req,res,next);
