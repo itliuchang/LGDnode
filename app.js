@@ -4,6 +4,7 @@ var controllers = require('./controllers'),
 	route = require('./config/route'),
 	proxy = require('./proxy');
 	ejs = require('ejs'),
+	session = require('express-session'),
 	app = express();
 ejs.open = "{{";
 ejs.close = "}}";
@@ -21,22 +22,16 @@ app.use(function(req,res,next){
 	}
 	next();
 });
-// app.use(function(req,res,next){
-// 	if(req.path = '/userbind'){
-// 		app.get('/userbind',controllers.UserBind);
-// 	}
-// 	next();
-// });
-// app.use(function(req,res,next){
-// 	var openId = req.query.openId || 0;
-// 	if(proxy.user.auth(openId).code==200) next();
-// 		else{
-// 			res.redirect('/userbind');
-// 			next();
-// 		}
+app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false, maxAge: null }}));
+app.use(cookieParser());
 
-// });
 app.use(function(req,res,next){
+	session({secret:'123456',name: 'testapp',cookie: {maxAge: 80000,openId:req.query.openId},resave: false,saveUninitialized: true,})(req,res,next);
+	next();
+});
+
+app.use(function(req,res,next){
+	if(req.query.openId) req.session.openId = req.query.openId;	
 	route(req,res,app,controllers,proxy);
 	next();
 });
