@@ -24,13 +24,9 @@ app.use(function(req,res,next){
 });
 app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false, maxAge: null }}));
 
-app.use(function(req,res,next){
-	session({secret:'123456',name: 'testapp',cookie: {maxAge: 80000,openId:req.query.openId},resave: false,saveUninitialized: true,})(req,res,next);
-	next();
-});
 
 app.use(function(req,res,next){
-	if(req.query.openId) req.session.openId = req.query.openId;	
+	if(req.query.openId) req.session.openId = req.query.openId;
 	route(req,res,app,controllers,proxy);
 	next();
 });

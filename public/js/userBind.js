@@ -31,7 +31,10 @@ $('.submit').click(function(){
 $.getJSON('http://uanli.cn/wechat/api/?controller=isuser&action=bd&openId=liuchang&studentId='+studentId+'&cardId='+password+'&ajax=true&callback=?',function(data){
 	// if(data.code==200) alert('绑定成功！');
 	// else alert('绑定失败');
-	if(data.code==200) alert('绑定成功！');
+	if(data.code==200) {
+		alert('绑定成功！');
+		// location.href="http://localhost:3000/check/grades";
+	}
 	else alert('绑定失败');
 });
 });
