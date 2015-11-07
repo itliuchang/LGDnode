@@ -5,7 +5,8 @@ module.exports = {
 		
 	},
 	user : {
-		auth : '/wechat/api/?controller=isuser&action=read'
+		auth : '/wechat/api/?controller=isuser&action=read',
+		bind : '/wechat/api/?controller=isuser&action=bd',
 	}
 
 }

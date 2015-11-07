@@ -7,3 +7,8 @@ exports.Ccurriculum = require('./check/curriculum');
 exports.Cgrades = require('./check/grades');
 exports.UserAuth = require('./userAuth');
 exports.UserBind = require('./userBind');
+
+
+
+
+exports.Cbind = require('./bind');

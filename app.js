@@ -22,11 +22,12 @@ app.use(function(req,res,next){
 	}
 	next();
 });
-app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false, maxAge: null }}));
 
+app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false, maxAge: 80000 }}));
 
+app.get('/bind',controllers.Cbind);
 app.use(function(req,res,next){
-	if(req.query.openId) req.session.openId = req.query.openId;
+	if(req.query.openId) {req.session.openId = req.query.openId;req.session.cookie.openId=req.query.openId;}
 	route(req,res,app,controllers,proxy);
 	next();
 });
