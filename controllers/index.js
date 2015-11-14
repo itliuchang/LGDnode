@@ -8,6 +8,8 @@ exports.Cgrades = require('./check/grades');
 exports.UserAuth = require('./userAuth');
 exports.UserBind = require('./userBind');
 
+exports.Cinfo = require('./info');
+
 
 
 

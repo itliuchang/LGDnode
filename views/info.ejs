@@ -1,0 +1,12 @@
+{{ include ./layout/header }}
+<link rel="stylesheet" type="text/css" href="/css/info.css">
+	<h1>毕业证件照</h1>
+	<img class="photo" src="{{= data.smallPic }}" alt="">
+	<div class="infoWrapper">
+		<p>性别：{{= data.sex }}</p>
+		<p>学院：{{= data.academy }}</p>
+		<p>班级：{{= data.class}}</p>
+		<p>点击次数：{{= data.hitTimes }}</p>
+		<p>魅力值：{{= data.popularity }}</p>
+	</div>
+{{ include ./layout/footer}}

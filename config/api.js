@@ -1,12 +1,13 @@
 module.exports = {
-	host : 'uanli.cn',
+	host : '2.uanli.sinaapp.com',
 	check : {
 		grades : '/wechat/api/?controller=grade&action=read',
 		
 	},
 	user : {
-		auth : '/wechat/api/?controller=isuser&action=read',
-		bind : '/wechat/api/?controller=isuser&action=bd',
+		auth : '/api/?controller=Student&action=isBinding',
+		bind : '/api/?controller=Student&action=Binding',
+		info : '/api/?controller=Student&action=getInfoByOpenId'
 	}
 
 }
