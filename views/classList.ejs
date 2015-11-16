@@ -1,0 +1,21 @@
+{{ include ./layout/header }}
+<link rel="stylesheet" type="text/css" href="/css/classList.css">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>查看</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{ for(var i=0;i<data.length;i++){ }}
+			<tr>
+				<th>{{= data[i].stuId }}</th>
+				<th>{{= data[i].name }}</th>
+				<th><a href="/info?stuId={{= data[i].stuId }}">查看</a></th>
+			</tr>
+			{{ } }}
+		</tbody>
+	</table>
+{{ include ./layout/footer}}

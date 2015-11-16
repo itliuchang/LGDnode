@@ -9,6 +9,7 @@ exports.UserAuth = require('./userAuth');
 exports.UserBind = require('./userBind');
 
 exports.Cinfo = require('./info');
+exports.CclassList = require('./classList');
 
 
 

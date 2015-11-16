@@ -6,6 +6,7 @@ module.exports=function(req,res,app,controllers,proxy){
 	}else{
 		var sopenId ="openId" in req.session?req.session.openId:0;
 		var openId = req.query.openId || sopenId || 0;
+		console.log(openId);
 		if(proxy.user.auth(openId).code!=200) res.redirect('/userAuth');
 		else{
 			app.get('/active/index',controllers.Aindex);
@@ -15,6 +16,7 @@ module.exports=function(req,res,app,controllers,proxy){
 			app.get('/check/books',controllers.Cbooks);
 			app.get('/check/classroom',controllers.Cclassroom);
 			app.get('/info',controllers.Cinfo);
+			app.get('/classlist',controllers.CclassList);
 		}
 	}
 	

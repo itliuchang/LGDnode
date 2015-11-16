@@ -7,7 +7,9 @@ module.exports = {
 	user : {
 		auth : '/api/?controller=Student&action=isBinding',
 		bind : '/api/?controller=Student&action=Binding',
-		info : '/api/?controller=Student&action=getInfoByOpenId'
+		info : '/api/?controller=Student&action=getInfoByOpenId',
+		infoByStuId : '/api/?controller=Student&action=getInfoByStuId',
+		classList : '/api/?controller=Student&action=getAllClassmates',
 	}
 
 }
