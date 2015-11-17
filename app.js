@@ -23,7 +23,7 @@ app.use(function(req,res,next){
 	next();
 });
 
-app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false, maxAge: 80000 }}));
+app.use(session({resave: false,saveUninitialized: true,secret:'123456',name: 'testapp',cookie:{ path: '/', httpOnly: true, secure: false }}));
 
 app.get('/bind',controllers.Cbind);
 app.use(function(req,res,next){
