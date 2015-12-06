@@ -2,6 +2,8 @@ module.exports = {
 	host : '2.uanli.sinaapp.com',
 	check : {
 		grades : '/wechat/api/?controller=grade&action=read',
+		timeTable : '/api/?controller=Timetable&action=read',
+		classroom : '/api/?controller=Classroom&action=read',
 		
 	},
 	user : {
