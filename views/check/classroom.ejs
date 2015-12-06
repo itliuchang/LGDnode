@@ -1,3 +1,44 @@
 {{ include ../layout/header }}
-	<h1>{{= data[0].classroom}}</h1>
+<style type="text/css">
+	input{
+		width: 100%;
+	}
+</style>
+<label>请选择日期：</label>
+<input type="date">
+<table class="table  ">
+	<thead>
+		<tr>
+			<th>上课时间</th>
+			<th>教室</th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+<script>
+	$(function(){
+		var obj = {
+			1:'第1~2节课',
+			2:'第3~4节课',
+			3:'第5~6节课',
+			4:'第7~8节课',
+		}
+		var data = {
+			1:['hehe','fds'],
+			2:['hehe','fds'],
+			3:['hehe','fds'],
+			4:['hehe','fds']
+		}
+		$('input').on('change',function(){
+			$.get('http://api.uanli.cn/api/?controller=Classroom&action=read',{date:$(this).val()},function(d){
+				console.log(data);
+			});
+			// var $body = $('tbody');
+			// for(var i=1;i<=4;i++){
+			// 	$body.append('<tr><th>'+obj[i]+'</th><th>'+data[i].toString()+'</th></tr>');
+			// }
+		});
+	});
+</script>
 {{ include ../layout/footer}}
