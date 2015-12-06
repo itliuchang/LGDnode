@@ -31,7 +31,7 @@
 			4:['hehe','fds']
 		}
 		$('input').on('change',function(){
-			$.get('http://api.uanli.cn/api/?controller=Classroom&action=read',{date:$(this).val()},function(d){
+			$.get('api.uanli.cn/api/?controller=Classroom&action=read',{date:$(this).val()},function(d){
 				console.log(data);
 			});
 			// var $body = $('tbody');
