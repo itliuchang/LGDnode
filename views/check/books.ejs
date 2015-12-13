@@ -1,3 +1,68 @@
 {{ include ../layout/header }}
-	<h1>图书hehe查询</h1>
+<style type="text/css">
+	.search{
+		width: 80px;
+		height: 35px;
+		border-radius: 5px;
+	}
+	.row{
+		padding: 20px 0px;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	select{
+		border: none;
+		text-align: center;
+		background-color: #fff;
+	}
+	input{
+		border: none;
+		border-bottom: 1px solid #ececec;
+	}
+	select,input,.search{
+		height: 35px;
+	}
+	.result{
+		padding-bottom: 50px;
+	}
+</style>
+	<div class="row">
+		<select class="col-xs-2">
+			<option value="name">书名</option>
+			<option value="author">作者</option>
+			<option value="ISBN">ISBN</option>
+		</select>
+		<input type="text" placeholder="请输入搜索关键字" class="col-xs-8">
+		<a class="search col-xs-2 btn btn-success">搜索</a>
+	</div>
+	
+	<div class="result">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>书名</th>
+					<th>作者</th>
+					<th>编号</th>
+					<th>出版社</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		$(function(){
+			$('.search').click(function(){
+				$('tbody').empty();
+				var type = $('select').val(),
+					key = $('input').val();
+				$.getJSON('http://2.uanli.sinaapp.com/api/?controller=Library&action=getBookListByX&keyword='+key+'&type='+type+'&jsoncallback=?',function(d){
+					d = d.data;
+					for(var i=0,length = d.length;i<length;i++){
+						$('table tbody').append('<tr><th>'+d[i].bookname+'</th><th>'+d[i].author+'</th><th>'+d[i].marc+'</th><th>'+d[i].publishingHouse+'</th></tr>');
+					}
+				});
+			});
+		});
+	</script>
 {{ include ../layout/footer}}

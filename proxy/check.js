@@ -2,7 +2,8 @@ var api = require('../config/api'),
 	CProxy = require('./CProxy');
 module.exports = {
 	grades : function(id){
-		var url = api.check.grades+'&studentId='+id;
+		var url = api.check.grades+'&openid='+id;
+		console.log(url);
 		return CProxy.get(url);
 	},
 	classroom : function(){

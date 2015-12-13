@@ -31,13 +31,13 @@
 			4:['hehe','fds']
 		}
 		$('input').on('change',function(){
-			$.get('api.uanli.cn/api/?controller=Classroom&action=read',{date:$(this).val()},function(d){
-				console.log(data);
+			$.getJSON('http://api.uanli.cn/api/?controller=Classroom&action=read&date='+$(this).val()+'&jsoncallback=?',function(d){
+			$('tbody').empty();
+			for(var i=1;i<=4;i++){
+				$('tbody').append('<tr><th>'+obj[i]+'</th><th>'+d.data[i].toString()+'</th></tr>');
+			}
+			$('tbody').append('<tr><th>obj[1]</th><th>data[1][1]</th></tr>');
 			});
-			// var $body = $('tbody');
-			// for(var i=1;i<=4;i++){
-			// 	$body.append('<tr><th>'+obj[i]+'</th><th>'+data[i].toString()+'</th></tr>');
-			// }
 		});
 	});
 </script>
